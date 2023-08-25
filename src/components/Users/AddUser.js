@@ -6,20 +6,20 @@ import styles from "./AddUser.module.css";
 
 const AddUser = (props) => {
   const [userName, setUserName] = useState();
-  const [userAge, setUserAge] = useState();
+  const [age, setAge] = useState();
 
   const userNameHandler = (event) => {
     setUserName(event.target.value);
   };
 
   const userAgeHandler = (event) => {
-    setUserAge(event.target.value);
+    setAge(event.target.value);
   };
 
   const userInputSubmit = () => {
     const inputData = {
       userName: userName,
-      userAge: userAge,
+      age: age,
     };
 
     props.data(inputData);
