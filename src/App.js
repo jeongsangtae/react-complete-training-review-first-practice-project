@@ -7,13 +7,10 @@ function App() {
   const [users, setUsers] = useState([]);
 
   const userInputData = (inputData) => {
-    setUsers((prevInputData) => {
-      return [inputData, ...prevInputData];
+    setUsers((prevUsers) => {
+      return [...prevUsers, inputData];
     });
-    console.log(inputData);
   };
-
-  console.log(users);
 
   return (
     <div>
