@@ -5,7 +5,7 @@ import Card from "../UI/Card";
 import styles from "./UserList.module.css";
 
 const UserList = (props) => {
-  console.log(props.userData);
+  console.log(props.userDatas);
 
   return (
     <Card className={styles.users}>
