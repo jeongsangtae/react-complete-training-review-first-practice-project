@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <AddUser data={userInputData} />
-      <UserList userData={users} />
+      <UserList userDatas={users} />
     </div>
   );
 }
