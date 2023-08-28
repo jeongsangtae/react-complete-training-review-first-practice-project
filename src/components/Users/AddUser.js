@@ -5,8 +5,6 @@ import Button from "../UI/Button";
 import ErrorModal from "../UI/ErrorModal";
 import styles from "./AddUser.module.css";
 
-import styles from "./AddUser.module.css";
-
 const AddUser = (props) => {
   const [userName, setUserName] = useState("");
   const [age, setAge] = useState("");
@@ -31,7 +29,7 @@ const AddUser = (props) => {
       return;
     }
 
-    if (+age < 0) {
+    if (+age < 1) {
       setError({
         title: "Invalid age",
         message: "Please enter a valid age (> 0).",
