@@ -48,9 +48,19 @@ const AddUser = (props) => {
     setAge("");
   };
 
+  const closeHandler = () => {
+    setError(null);
+  };
+
   return (
     <div>
-      {error && <ErrorModal title={error.title} message={error.message} />}
+      {error && (
+        <ErrorModal
+          title={error.title}
+          message={error.message}
+          onClose={closeHandler}
+        />
+      )}
 
       <Card className={styles.input}>
         <form onSubmit={userInputSubmit}>
