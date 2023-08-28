@@ -5,6 +5,8 @@ import Button from "../UI/Button";
 import ErrorModal from "../UI/ErrorModal";
 import styles from "./AddUser.module.css";
 
+import styles from "./AddUser.module.css";
+
 const AddUser = (props) => {
   const [userName, setUserName] = useState("");
   const [age, setAge] = useState("");
