@@ -6,15 +6,18 @@ import UserList from "./components/Users/UserList";
 function App() {
   const [users, setUsers] = useState([]);
 
-  const userInputData = (inputData) => {
+  const userInputData = (userName, age) => {
     setUsers((prevUsers) => {
-      return [...prevUsers, inputData];
+      return [
+        ...prevUsers,
+        { userName: userName, age: +age, id: Math.random().toString() },
+      ];
     });
   };
 
   return (
     <div>
-      <AddUser data={userInputData} />
+      <AddUser onAddUser={userInputData} />
       <UserList userDatas={users} />
     </div>
   );

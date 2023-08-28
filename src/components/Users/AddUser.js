@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import ErrorModal from "../UI/ErrorModal";
-
 import styles from "./AddUser.module.css";
 
 const AddUser = (props) => {
@@ -38,13 +37,13 @@ const AddUser = (props) => {
       return;
     }
 
-    const inputData = {
-      userName: userName,
-      age: +age,
-      id: Math.random().toString(),
-    };
+    // const inputData = {
+    //   userName: userName,
+    //   age: +age,
+    //   id: Math.random().toString(),
+    // };
 
-    props.data(inputData);
+    props.onAddUser(userName, age);
     setUserName("");
     setAge("");
   };
